@@ -1,0 +1,15 @@
+{
+  "scenarioName": "CustomerCall",
+  "requiredScenarioState": "Started",
+  "request": {
+    "method": "GET",
+    "urlPattern": "/customer"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "customer_response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

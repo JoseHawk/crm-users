@@ -4,6 +4,7 @@ import com.joselara.crmusers.models.enums.UserRole;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 @Entity
 @Data
@@ -11,6 +12,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
+    @Email
     private String email;
 
     private String password;
