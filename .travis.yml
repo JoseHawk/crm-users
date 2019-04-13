@@ -14,3 +14,6 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
+env:
+  global:
+    secure: bDYh+Jsdf6aVBNmSBwDY2Ejq1QHbPOmv43oyEC/0TZRRnwPTJSN3jvUhaEpg6BQTu6yezJG2GP7Dh8yl8ki4llLDEdC1oSQ9pQmS1lH8XA6xkORQhGrf1uts/1Ud1k6jLRYTd7qdA9JmnlH/ZK8uSzpin06NQS1NtjgX+DmYfWjp7+nlqiAqMu3F3dFwugco2NEnjO4oR579VtCdz5WUtnC8HNfG1A1N8TZcmH/GTbls+q4o6Y6Rs4V16HF6jNR5mm2yetHVt8b3HoaMvjk9N8uCty6OOKaJqNrAZJC7adGRGrXM9CNdcVDMCZTt5tF4un1MA1vAlMbH6KoHnj7jCNT7yTEY79QZlsSdk/7cTc/kEpHUXr3mD+dW3c8GDKcesqTD6h5mb+1ApyezyUHP9SxvjmYyGsSol+a8KRL1VQ+fnzpxWgOZZaqxt7H9SBoqCesaAsyJg03EpWtKN4Vh+//VjmqUlTVQTHHp8UCI/bWYcgv0Fl9NuMeHrPBVsUFF/LhiIw1NbV+TDl+3JIxoWb7dCi3X7Dh3L+t1C60JZZBlr7MnYw3bHwz3ajKZ+8lsMvDmkxUiXXqNby2hRQuEn4GGCzcgXfBhM0oHdpjizBTZNrzWV5If2Mkn/vZJGHnPdJt7b6UqF/1XliHIzCXI7VLs3nC9sfkgHFvr9RwcY1M=
