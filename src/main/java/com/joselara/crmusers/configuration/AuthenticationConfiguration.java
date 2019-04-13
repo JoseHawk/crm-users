@@ -25,7 +25,7 @@ public class AuthenticationConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    public void globalUserDetails(AuthenticationManagerBuilder auth) {
-        auth.authenticationProvider(authenticationService);
+    public void globalUserDetails(AuthenticationManagerBuilder authenticationManager) {
+        authenticationManager.authenticationProvider(authenticationService);
     }
 }

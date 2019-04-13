@@ -36,7 +36,6 @@ public class UserService {
 
     public User updateUser(UserDTO userInformation, String userEmail) throws NotFoundException {
         User user = findUser(userEmail);
-        user.setEmail(userInformation.getEmail());
         user.setSecret(userInformation.getSecret());
 
         userRepository.save(user);

@@ -75,7 +75,7 @@ public class UserServiceUnitTest {
 
         User actualUser = cut.updateUser(userDTO, user.getEmail());
 
-        assertEquals(user.getEmail(), actualUser.getEmail());
+        assertEquals(user.getSecret(), actualUser.getSecret());
     }
 
     @Test(expected = NotFoundException.class)
