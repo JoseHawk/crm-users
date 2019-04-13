@@ -20,7 +20,7 @@ public class UserConverterUnitTest {
     public void mapTest() {
         UserDTO userDTO = UserDTO.builder()
                 .email("test@domain.com")
-                .password("passwordTest")
+                .secret("passwordTest")
                 .build();
 
         User user = cut.map(userDTO, User.class);

@@ -41,7 +41,7 @@ public class AuthenticationService implements AuthenticationProvider {
         if (authenticatedUser != null) {
             return authenticatedUser;
         } else {
-            throw new UsernameNotFoundException("Invalid username or password.");
+            throw new UsernameNotFoundException("Invalid username or secret.");
         }
     }
 
@@ -51,8 +51,8 @@ public class AuthenticationService implements AuthenticationProvider {
             String providedUserEmail = authentication.getName();
             Object providedUserPassword = authentication.getCredentials();
 
-            if (providedUserEmail.equalsIgnoreCase(user.getEmail()) && providedUserPassword.equals(user.getPassword())) {
-                return new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword(),
+            if (providedUserEmail.equalsIgnoreCase(user.getEmail()) && providedUserPassword.equals(user.getSecret())) {
+                return new UsernamePasswordAuthenticationToken(user.getEmail(), user.getSecret(),
                         Collections.singleton(new SimpleGrantedAuthority(user.getUserRole().name())));
             }
         }

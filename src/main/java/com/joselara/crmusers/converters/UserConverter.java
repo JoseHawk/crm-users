@@ -14,7 +14,7 @@ public class UserConverter extends ConfigurableMapper {
 
         factory.classMap(UserDTO.class, User.class)
                 .field("email", "email")
-                .field("password", "password")
+                .field("secret", "secret")
                 .field("userRole", "userRole")
                 .byDefault()
                 .register();

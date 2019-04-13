@@ -20,7 +20,7 @@ public class UserDTO {
     @Email
     private String email;
     @NotNull
-    private String password;
+    private String secret;
     @NotNull
     private UserRole userRole;
 

@@ -38,7 +38,7 @@ public class UserServiceUnitTest {
     public void setUp() {
         user = new User();
         user.setEmail("test@domain.com");
-        user.setPassword("testPassword");
+        user.setSecret("testPassword");
         user.setUserRole(UserRole.ROLE_USER);
 
         when(userRepository.findById(any())).thenReturn(Optional.of(user));
@@ -48,7 +48,7 @@ public class UserServiceUnitTest {
     public void createUserTest() {
         UserDTO userDTO = UserDTO.builder()
                 .email("test@domain.com")
-                .password("testPassword")
+                .secret("testPassword")
                 .userRole(UserRole.ROLE_USER)
                 .build();
         when(userConverter.map(userDTO, User.class)).thenReturn(user);
@@ -69,7 +69,7 @@ public class UserServiceUnitTest {
     public void updateUserTest() throws NotFoundException {
         UserDTO userDTO = UserDTO.builder()
                 .email("new@domain.com")
-                .password("newPassword")
+                .secret("newPassword")
                 .userRole(UserRole.ROLE_USER)
                 .build();
 
@@ -83,7 +83,7 @@ public class UserServiceUnitTest {
         when(userRepository.findById(user.getEmail())).thenReturn(Optional.empty());
         UserDTO userDTO = UserDTO.builder()
                 .email("new@domain.com")
-                .password("newPassword")
+                .secret("newPassword")
                 .userRole(UserRole.ROLE_USER)
                 .build();
 
@@ -94,7 +94,7 @@ public class UserServiceUnitTest {
     public void updateUserRoleTest() throws NotFoundException {
         UserDTO userDTO = UserDTO.builder()
                 .email("new@domain.com")
-                .password("newPassword")
+                .secret("newPassword")
                 .userRole(UserRole.ROLE_ADMIN)
                 .build();
 

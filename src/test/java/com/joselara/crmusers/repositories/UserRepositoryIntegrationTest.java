@@ -6,12 +6,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@TestPropertySource(locations = "classpath:test.properties")
+@ActiveProfiles("test")
 public class UserRepositoryIntegrationTest {
 
     @Autowired
@@ -21,7 +25,7 @@ public class UserRepositoryIntegrationTest {
     public void testSaveAndDeleteUser() {
         User user = new User();
         user.setEmail("test@domain.com");
-        user.setPassword("testPassword");
+        user.setSecret("testPassword");
         user.setUserRole(UserRole.ROLE_USER);
 
         cut.save(user);
@@ -31,6 +35,6 @@ public class UserRepositoryIntegrationTest {
 
         cut.delete(user);
 
-        assertEquals(2, cut.findAll().size());
+        assertEquals(0, cut.findAll().size());
     }
 }
