@@ -35,7 +35,7 @@ public class AuthorizationConfiguration extends AuthorizationServerConfigurerAda
     private int TOKEN_VALIDATY;
 
     @Autowired
-    private AuthenticationManager authManager;
+    private AuthenticationManager authenticationManager;
 
     @Autowired
     private TokenStore tokenStore;
@@ -57,8 +57,8 @@ public class AuthorizationConfiguration extends AuthorizationServerConfigurerAda
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints
                 .tokenStore(tokenStore)
-                .authenticationManager(authManager)
-                .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;
+                .authenticationManager(authenticationManager)
+                .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
     }
 
     @Override
