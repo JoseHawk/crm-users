@@ -1,0 +1,9 @@
+---
+applications:
+  - name: crm-users
+    buildpack: java_buildpack
+    path: target/crm-users.0.0.1-SNAPSHOT.jar
+    memory: 512M
+    disk_quota: 256M
+services:
+  - mysql
